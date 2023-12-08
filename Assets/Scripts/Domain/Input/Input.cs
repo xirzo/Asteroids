@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 namespace Asteroids.Domain.Inputs
 {
     public interface Input
     {
-        
+        event Action OnFirePerformed;
+        float MovementX { get; }
+        float MovementY { get; }
     }
 }
