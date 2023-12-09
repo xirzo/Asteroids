@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2857741744780277}
   - component: {fileID: 5658533862997107233}
+  - component: {fileID: 6829319972250737014}
   - component: {fileID: 4260260996834774315}
   - component: {fileID: 5056051005162916420}
   - component: {fileID: 8144459012787237091}
@@ -34,7 +35,7 @@ Transform:
   m_Children:
   - {fileID: 765189608151622161}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5658533862997107233
 MonoBehaviour:
@@ -49,6 +50,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealthPoints: 1
+--- !u!114 &6829319972250737014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446600366554152281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5b9eed3758b7d4081ffc2901fe3339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialForceLowerLimit: 10.86
+  _initialForceUpperLimit: 24.1
 --- !u!114 &4260260996834774315
 MonoBehaviour:
   m_ObjectHideFlags: 0

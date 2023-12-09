@@ -7,6 +7,9 @@ namespace Asteroids.Domain.Moving
     [RequireComponent(typeof(Input))]
     public class PlayerMovement : MonoBehaviour, Movement
     {
+        public bool IsMoving => _rigidbody.velocity.magnitude > 0.01f;
+        public Vector3 Velocity => _rigidbody.velocity;
+
         [SerializeField, Min(0)] private float _movementSpeed = 5f;
         [SerializeField, Min(0)] private float _rotationSpeed = 50f;
         private Rigidbody2D _rigidbody;

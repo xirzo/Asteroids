@@ -6,6 +6,7 @@ namespace Asteroids.Domain.Moving
 {
     public interface Movement
     {
-
+        bool IsMoving { get; }
+        Vector3 Velocity { get; }
     }
 }
