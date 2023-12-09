@@ -2,15 +2,15 @@ using UnityEngine;
 
 namespace Asteroids.Domain.Shooting
 {
-    public class UpDirectionShooter : MonoBehaviour, Shooter
+    public class PlayerShooter : MonoBehaviour, Shootable
     {
         [SerializeField] private Projectile _projectilePrefab;
         [SerializeField] private Transform _projectileSpawnpoint;
-        private Shooter _shooter;
+        private Shootable _shooter;
 
         private void Awake()
         {
-            _shooter = new DefaultShooter(_projectilePrefab, _projectileSpawnpoint);
+            _shooter = new Shooter(_projectilePrefab, _projectileSpawnpoint);
         }
 
         public void Shoot()

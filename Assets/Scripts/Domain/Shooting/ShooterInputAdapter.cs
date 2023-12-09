@@ -4,11 +4,11 @@ using Input = Asteroids.Domain.Inputs.Input;
 namespace Asteroids.Domain.Shooting
 {
     [RequireComponent(typeof(Input))]
-    [RequireComponent(typeof(Shooter))]
+    [RequireComponent(typeof(Shootable))]
     public class ShooterInputAdapter : MonoBehaviour
     {
         private Input _input;
-        private Shooter _shooter;
+        private Shootable _shooter;
 
         private void Awake()
         {

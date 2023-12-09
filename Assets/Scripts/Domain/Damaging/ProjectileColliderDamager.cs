@@ -2,7 +2,7 @@ using System;
 using Asteroids.Domain.Markers;
 using UnityEngine;
 
-namespace Asteroids.Domain.Combat
+namespace Asteroids.Domain.Damaging
 {
     public class ProjectileColliderDamager : MonoBehaviour
     {

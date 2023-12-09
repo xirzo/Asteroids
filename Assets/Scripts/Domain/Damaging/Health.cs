@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Asteroids.Domain.Combat
+namespace Asteroids.Domain.Damaging
 {
     public class Health : MonoBehaviour
     {
@@ -23,7 +23,7 @@ namespace Asteroids.Domain.Combat
 
         private void Die()
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
         public void Damage(int points = 1)
