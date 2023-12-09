@@ -5,17 +5,33 @@ namespace Asteroids.Domain.Spawning
     public class Spawner<T> where T : MonoBehaviour
     {
         private T _prefab;
-        private Transform _spawnpoint;
+        private Vector3 _position;
+        private Quaternion _rotation;
+        private Transform _parent;
 
-        public Spawner(T prefab, Transform spawnpoint)
+        public Spawner(T prefab)
         {
             _prefab = prefab;
-            _spawnpoint = spawnpoint;
+        }
+
+        public void SetPosition(Vector3 position)
+        {
+            _position = position;
+        }
+
+        public void SetRotation(Quaternion rotation)
+        {
+            _rotation = rotation;
+        }
+
+        public void SetParent(Transform parent)
+        {
+            _parent = parent;
         }
 
         public T Spawn()
         {
-            return Object.Instantiate(_prefab, _spawnpoint.position, _spawnpoint.rotation);
+            return Object.Instantiate(_prefab, _position, _rotation, _parent);
         }
     }
 }

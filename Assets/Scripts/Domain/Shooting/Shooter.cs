@@ -9,7 +9,9 @@ namespace Asteroids.Domain.Shooting
 
         public Shooter(Projectile projectilePrefab, Transform projectileSpawnpoint)
         {
-            _spawner = new Spawner<Projectile>(projectilePrefab, projectileSpawnpoint);
+            _spawner = new Spawner<Projectile>(projectilePrefab);
+            _spawner.SetPosition(projectileSpawnpoint.position);
+            _spawner.SetRotation(projectileSpawnpoint.rotation);
         }
 
         public void Shoot()
