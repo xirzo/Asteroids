@@ -5,7 +5,7 @@ namespace Asteroids.Domain.Inputs
 {
     public interface Input
     {
-        event Action OnFirePerformed;
+        bool FirePressed { get; }
         float MovementX { get; }
         float MovementY { get; }
     }

@@ -1,21 +1,23 @@
-using System;
 using UnityEngine;
 
 namespace Asteroids.Domain.Inputs
 {
     public class StandardInput : MonoBehaviour, Input
     {
-        public event Action OnFirePerformed;
-        public float MovementX => _movementX;
-        public float MovementY => _movementY;
+        public bool FirePressed { get; private set; }
+        public float MovementX { get; private set; }
+        public float MovementY { get; private set; }
 
-        private float _movementX;
-        private float _movementY;
+        private void GetInput()
+        {
+            FirePressed = UnityEngine.Input.GetKeyDown(KeyCode.Space);
+            MovementX = UnityEngine.Input.GetAxisRaw("Horizontal");
+            MovementY = UnityEngine.Input.GetAxisRaw("Vertical");
+        }
 
         private void Update()
         {
-            _movementX = UnityEngine.Input.GetAxisRaw("Horizontal");
-            _movementY = UnityEngine.Input.GetAxisRaw("Vertical");
+            GetInput();
         }
     }
 }
