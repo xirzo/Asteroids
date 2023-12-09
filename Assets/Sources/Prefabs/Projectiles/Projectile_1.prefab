@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1404382542787995225}
   - component: {fileID: 8027817709661646134}
+  - component: {fileID: 7275750626130711347}
   - component: {fileID: 1633996661699660801}
   m_Layer: 0
   m_Name: Projectile_1
@@ -79,6 +80,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _launchInitialForce: 2
+--- !u!114 &7275750626130711347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6341092724019908876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65938f3b962e00a4f8979d059c53ffc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &1633996661699660801
 Rigidbody2D:
   serializedVersion: 4

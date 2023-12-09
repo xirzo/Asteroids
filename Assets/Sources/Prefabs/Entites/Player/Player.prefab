@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5744800015315976053}
   - component: {fileID: 7237607496547342500}
-  - component: {fileID: 149648664856526608}
+  - component: {fileID: 3239690731239634100}
   m_Layer: 0
   m_Name: Sprite_1
   m_TagString: Untagged
@@ -105,7 +105,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 87634da2d14c3c848a0883dd7c72379d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a9d6ead30267ff4f9eaeff7df8504de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116,8 +116,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &149648664856526608
-PolygonCollider2D:
+--- !u!61 &3239690731239634100
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -148,7 +148,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.014366701}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -158,20 +158,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.08089112, y: 0.23205733}
-      - {x: 0.02576197, y: 0.4092238}
-      - {x: -0.008760855, y: 0.4035864}
-      - {x: -0.22036156, y: -0.2843294}
-      - {x: -0.18343519, y: -0.38079274}
-      - {x: -0.05279205, y: -0.4341885}
-      - {x: 0.08534929, y: -0.43540108}
-      - {x: 0.2128579, y: -0.37379825}
-      - {x: 0.2529794, y: -0.28468895}
-      - {x: 0.21735439, y: -0.1848085}
-      - {x: 0.14742813, y: 0.038576603}
-  m_UseDelaunayMesh: 0
+  serializedVersion: 2
+  m_Size: {x: 0.44850183, y: 0.66956604}
+  m_EdgeRadius: 0
 --- !u!1 &7116979656070315618
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6573813651199045477}
+  - component: {fileID: 7218280475170011227}
   - component: {fileID: 1615356381155863320}
   - component: {fileID: 4431642935963018517}
   - component: {fileID: 647301486953347882}
@@ -243,6 +233,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7218280475170011227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8541543212184978220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d662f88bfbc56c4da41dbcbef77e4b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1615356381155863320
 MonoBehaviour:
   m_ObjectHideFlags: 0
