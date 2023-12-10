@@ -5,8 +5,6 @@ namespace Asteroids.Domain.Damaging
     [RequireComponent(typeof(Health))]
     public class AsteroidColliderDamager : MonoBehaviour
     {
-        [SerializeField, Min(0)] private float _timeBeforeAbleToDamageAgain = 0.75f;
-
         private Health _health;
 
         private void Awake()

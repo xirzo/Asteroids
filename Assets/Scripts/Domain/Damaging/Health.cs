@@ -10,7 +10,8 @@ namespace Asteroids.Domain.Damaging
         public int CurrentHealthPoints => _currentHealthPoints;
         [SerializeField, Min(1)] private int _maxHealthPoints = 1;
         private int _currentHealthPoints;
-
+        private Vector3 _startPoisiton;
+        private Quaternion _startRotation;
         private void SetCurrentHealthToMax()
         {
             _currentHealthPoints = _maxHealthPoints;
@@ -18,12 +19,21 @@ namespace Asteroids.Domain.Damaging
 
         private void Awake()
         {
+            _startPoisiton = transform.position;
+            _startRotation = transform.rotation;
+
             SetCurrentHealthToMax();
         }
 
         private void Die()
         {
             gameObject.SetActive(false);
+        }
+
+        private void ResetPositionAndRotation()
+        {
+            transform.position = _startPoisiton;
+            transform.rotation = _startRotation;
         }
 
         public void Damage(int points = 1)
@@ -42,6 +52,7 @@ namespace Asteroids.Domain.Damaging
             }
 
             _currentHealthPoints -= points;
+            ResetPositionAndRotation();
             OnDamaged?.Invoke(_currentHealthPoints);
         }
 
